@@ -12,3 +12,11 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+h1 {
+    color: red;
+   
+    &:hover {
+      color: blue;
+    }
+  }

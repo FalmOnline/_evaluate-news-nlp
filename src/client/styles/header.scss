@@ -3,3 +3,11 @@ header {
     justify-content: space-between;
     padding: 10px 40px;
 }
+
+h1 {
+    color: red;
+   
+    &:hover {
+      color: blue;
+    }
+  }
