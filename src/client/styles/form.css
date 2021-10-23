@@ -10,11 +10,3 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
-
-h1 {
-    color: red;
-   
-    &:hover {
-      color: blue;
-    }
-  }
