@@ -29,8 +29,12 @@ const analysisAPI = async(inputText) => {
     console.log("::: Running checkForText :::", inputText);
     console.log('2');
 
+    const mykey = await fetch('http://localhost:8081/apikey')
+    .then(response => response.json())
+    .then(data => data.key);
+
     const formdata = new FormData();
-    formdata.append("key", '1105a42b3ce77d392c09d6e3a91a6982');
+    formdata.append("key", mykey);
     formdata.append("txt", inputText);
     formdata.append("lang", "en");  // 2-letter code, like en es fr ...
 

@@ -10,6 +10,10 @@ var cors = require('cors')
 const dotenv = require('dotenv');
 dotenv.config();
 
+const apiKey = {
+    key: `${process.env.API_KEY}`
+}
+
 
 const app = express()
 app.use(cors())
@@ -26,10 +30,15 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
+app.get('/apikey', function(req, res) {
+    console.log(apiKey);
+    res.json(apiKey);
+})
+
 
 // Respond with JS object when a GET request is made to the homepage
 app.get('/getmydata', function (req, res) {
-    console.log('3');
+
     console.log(projectData);
     // res.send(projectData);
     res.json(projectData);
