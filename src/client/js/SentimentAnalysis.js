@@ -13,7 +13,7 @@ async function getAnalysis(inputText) {
         'confidence': data.confidence,
       }
 
-    postData('http://localhost:8081/mydata', json);
+    // postData('http://localhost:8081/mydata', json);
 
 
     console.log(json);
@@ -21,7 +21,9 @@ async function getAnalysis(inputText) {
 
      return json;
 
-    })
+    }).then(function (json) {
+        return postData('http://localhost:8081/mydata', json);
+      });
 }
 
 

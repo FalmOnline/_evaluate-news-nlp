@@ -13,8 +13,8 @@ async function handleSubmit(event) {
     fetch('http://localhost:8081/getmydata')
     .then(res => res.json())
     .then(function(data) {
-        console.log('7');
         console.log(data);
+        console.log('7');
         document.getElementById('results').innerHTML = 
         `   <div>Agreement: ${data.agreement}</div>
             <div>Irony: ${data.irony}</div>
