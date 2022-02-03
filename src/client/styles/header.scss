@@ -1,5 +1,42 @@
+@import './base.scss';
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
 }
+
+.logo {
+    width: 160px;
+}
+
+.nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: inline-block;
+      padding: 6px 12px;
+      text-decoration: none;
+      color: $secondary-color;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+  }
+  
+  @media (max-width: 500px) {
+    .logo {
+      width: 120px;
+    }
+    header {
+      padding: 10px;
+    }
+  }

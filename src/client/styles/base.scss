@@ -1,14 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@600&display=swap');
+
+$title-font: 'Poppins', sans-serif;
+$text-font: 'Open Sans', sans-serif;
+$primary-color: #2ba6cb;
+$secondary-color: #00234b;
+$red: #c71343;
+$grey: #cdcdcd;
+
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 main {
     flex: 2;
+    padding: 10px;
 }
 
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6,  input {
+    font-family: $title-font;
+}
+
+p, ul li, ul ol, textarea, {
+    font-family: $text-font;
 }

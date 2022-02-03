@@ -1,29 +1,18 @@
-# Webbpack Express Example App
+# Natural Language Processing App
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+The goal of this application is to analyze a text provided by the user and offer information about it, regarding the Agreement, Irony, Subjectivity and Confidence of the text.
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+## How to start the app?
 
-## What we will cover
+For the moment, the application works on a local server. So in order to start the application, you have to make the following steps:
 
-We will cover:
-
-- Webpack entry point
-- Webpack output and dist folder
-- Webpack Loaders
-- Webpack Plugins
-- Webpack Mode
-- Tools for convenient Webpack development
+1. Run npm run start
+2. npm run dev or npm run prod
 
 ## Get Up and Running
 
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
+1. Choose the text of your interest. It could be an article from a blog, a news or a post from Facebook. You can choose any type of text. You can also make your own text and check to see if the text has the meaning that you intended in the first place.
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+2. Paste the text in the text area and press Submit.
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in server.js
+3. Read the results.

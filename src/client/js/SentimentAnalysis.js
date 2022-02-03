@@ -1,23 +1,15 @@
 
 async function getAnalysis(inputText) {  
-    console.log('1');
     //Inside that callback function call your async GET request with the parameters:
 
     await analysisAPI(inputText)
     .then(function(data) {
-      console.log('4');
       let json = {
         'agreement': data.agreement,
         'irony': data.irony,
         'subjectivity': data.subjectivity,
         'confidence': data.confidence,
       }
-
-    // postData('http://localhost:8081/mydata', json);
-
-
-    console.log(json);
-    console.log('6');
 
      return json;
 
@@ -28,8 +20,6 @@ async function getAnalysis(inputText) {
 
 
 const analysisAPI = async(inputText) => {
-    console.log("::: Running checkForText :::", inputText);
-    console.log('2');
 
     const mykey = await fetch('http://localhost:8081/apikey')
     .then(response => response.json())
@@ -50,7 +40,6 @@ const analysisAPI = async(inputText) => {
 
     try {
         const data = await res.json();
-        console.log('3');
         return data;
   
       }  catch (error) {
@@ -76,8 +65,6 @@ const postData = async ( url = 'http://localhost:8081/mydata', data = {})=> {
 
 	try {
 		const newData = await response.json();
-    console.log(newData);
-    console.log('5');
     return newData;
 
 	} catch(error) {
@@ -87,3 +74,5 @@ const postData = async ( url = 'http://localhost:8081/mydata', data = {})=> {
 
 
 export { getAnalysis }
+export { analysisAPI }
+export { postData }

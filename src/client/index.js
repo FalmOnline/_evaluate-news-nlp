@@ -1,4 +1,3 @@
-import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
 import {getAnalysis} from './js/SentimentAnalysis'
 
@@ -9,7 +8,6 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 export {
-    checkForName,
     handleSubmit,
     getAnalysis
 }
